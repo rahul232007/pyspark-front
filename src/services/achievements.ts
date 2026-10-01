@@ -1,0 +1,85 @@
+import { Achievement } from '../types/achievement';
+
+export const MOCK_ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 'ach_first_step',
+    title: 'First Python Spark',
+    description: 'Complete your first Python lesson in Py-Spark.',
+    iconName: 'Zap',
+    category: 'Level',
+    xpReward: 50,
+    coinReward: 10,
+    progress: 1,
+    maxProgress: 1,
+    isUnlocked: true,
+    unlockedAt: 'Aug 4, 2026',
+  },
+  {
+    id: 'ach_streak_3',
+    title: 'On Fire!',
+    description: 'Maintain a 3-day daily learning streak.',
+    iconName: 'Flame',
+    category: 'Streak',
+    xpReward: 100,
+    coinReward: 25,
+    progress: 3,
+    maxProgress: 3,
+    isUnlocked: true,
+    unlockedAt: 'Aug 6, 2026',
+  },
+  {
+    id: 'ach_quiz_master',
+    title: 'Quiz Master',
+    description: 'Score 100% accuracy on 5 quizzes.',
+    iconName: 'Award',
+    category: 'Quiz',
+    xpReward: 200,
+    coinReward: 50,
+    progress: 2,
+    maxProgress: 5,
+    isUnlocked: false,
+  },
+  {
+    id: 'ach_code_warrior',
+    title: 'Monaco Code Warrior',
+    description: 'Solve 10 Monaco coding challenges.',
+    iconName: 'Code',
+    category: 'Coding',
+    xpReward: 300,
+    coinReward: 75,
+    progress: 3,
+    maxProgress: 10,
+    isUnlocked: false,
+  },
+  {
+    id: 'ach_gold_rank',
+    title: 'Golden Pythonista',
+    description: 'Reach the Gold Rank tier (3000 XP).',
+    iconName: 'Crown',
+    category: 'Level',
+    xpReward: 500,
+    coinReward: 150,
+    progress: 850,
+    maxProgress: 3000,
+    isUnlocked: false,
+  },
+  {
+    id: 'ach_social_butterfly',
+    title: 'Party Leader',
+    description: 'Connect with 5 Python learning friends.',
+    iconName: 'Users',
+    category: 'Social',
+    xpReward: 150,
+    coinReward: 40,
+    progress: 3,
+    maxProgress: 5,
+    isUnlocked: false,
+  },
+];
+
+export const achievementService = {
+  async getAchievements(): Promise<Achievement[]> {
+    await new Promise((r) => setTimeout(r, 200));
+    return MOCK_ACHIEVEMENTS;
+  },
+};
